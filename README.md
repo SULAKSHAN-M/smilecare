@@ -1,4 +1,4 @@
-# Smile Care Android — Patient + Doctor Edition
+# Smile Care Android | Patient + Doctor Edition
 
 Native Android app built with Kotlin and Jetpack Compose.
 
