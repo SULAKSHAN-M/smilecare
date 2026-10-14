@@ -1,0 +1,36 @@
+SMILE CARE — RUN FROM VS CODE (WINDOWS)
+
+1) Open the smilecare_android folder in VS Code.
+
+2) Open PowerShell terminal and use JDK 17:
+
+$env:JAVA_HOME="C:\Program Files\Eclipse Adoptium\jdk-17.0.20.101-hotspot"
+$env:Path="$env:JAVA_HOME\bin;$env:Path"
+java -version
+
+3A) If Gradle wrapper works:
+
+.\gradlew.bat clean
+.\gradlew.bat assembleDebug
+
+3B) If you manually extracted Gradle 8.9 to C:\Gradle\gradle-8.9:
+
+& "C:\Gradle\gradle-8.9\bin\gradle.bat" clean
+& "C:\Gradle\gradle-8.9\bin\gradle.bat" assembleDebug
+
+4) APK location:
+app\build\outputs\apk\debug\app-debug.apk
+
+5) Start emulator / connect phone, then:
+
+adb devices
+.\gradlew.bat installDebug
+adb shell am start -n com.smilecare.app/.MainActivity
+
+DEMO PATIENT
+patient@smilecare.app
+123456
+
+DEMO DOCTOR
+doctor@smilecare.app
+123456

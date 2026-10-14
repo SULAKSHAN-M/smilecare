@@ -1,0 +1,14 @@
+@'
+.gradle/
+**/build/
+local.properties
+.idea/
+*.iml
+.vscode/
+*.jks
+*.keystore
+captures/
+.externalNativeBuild/
+.cxx/
+.DS_Store
+'@ | Set-Content -Encoding ASCII .gitignore
